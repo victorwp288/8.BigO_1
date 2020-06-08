@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Array før sortering: " + Arrays.toString(test));
 
         bubbleSort.bubbleSort(test);
-        System.out.println("Array efter 'bubblesort': " + Arrays.toString(test));
+        System.out.println("Array efter 'bubble sort': " + Arrays.toString(test));
 
         int[] array = new int[10000];
         for (int i = 0; i < array.length; i++) {
@@ -42,13 +42,6 @@ public class Main {
         insertionSort.sort(array);
         double slutTid1 = System.nanoTime();
         System.out.println("'Insertion sort' på array med 10000 indexes tog: " + (slutTid1 - startTid1)/100000000 + " sekunder");
-
-
-
-
-
-
-
 
     }
 }
