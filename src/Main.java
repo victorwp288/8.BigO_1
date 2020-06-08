@@ -8,6 +8,7 @@ public class Main {
 
         BubbleSort bubbleSort = new BubbleSort();
         InsertionSort insertionSort = new InsertionSort();
+        SelectionSort selectionSort = new SelectionSort();
 
         int[] test = {5,9,8,1,2,3,6,7,4};
         System.out.println("Array før sortering: " + Arrays.toString(test));
@@ -42,6 +43,23 @@ public class Main {
         insertionSort.sort(array);
         double slutTid1 = System.nanoTime();
         System.out.println("'Insertion sort' på array med 10000 indexes tog: " + (slutTid1 - startTid1)/100000000 + " sekunder");
+
+
+        System.out.println("----------------------------------------------------------------");
+
+
+        int[] selectionTest = {5,9,8,1,2,3,6,7,4};
+        System.out.println("Array før sortering: " + Arrays.toString(selectionTest));
+
+        insertionSort.sort(test);
+        System.out.println("Array efter 'selection sort': " + Arrays.toString(test));
+
+        Collections.shuffle(Arrays.asList(array));
+
+        double startTid2 = System.nanoTime();
+        selectionSort.selectionSort(array);
+        double slutTid2 = System.nanoTime();
+        System.out.println("'Selection sort' på array med 10000 indexes tog: " + (slutTid2 - startTid2)/100000000 + " sekunder");
 
     }
 }
